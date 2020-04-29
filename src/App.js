@@ -1,16 +1,18 @@
-import React from 'react';
-import Count from './components/Count';
-import Array from './components/Array';
-import './assets/App.css';
+import React from 'react'
+// import ButtonPlay from './components/ButtonPlay'
+// import ButtonBack from './components/ButtonBack'
+// import ButtonNextQuote from './components/ButtonNextQuote'
+import DisplayNumQuote from './components/DisplayNumQuote'
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Count />
-        <hr />
-        <Array />
-      </header>
+      {/* <ButtonPlay /> */}
+      {/* <ButtonBack /> */}
+      {/* <ButtonNextQuote /> */}
+      <DisplayNumQuote />
     </div>
   );
 }
