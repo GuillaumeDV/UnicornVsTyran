@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ButtonPlay from './ButtonPlay'
 import '../assets/HomePage.css';
 
 class HomePage extends Component{
@@ -6,7 +7,7 @@ class HomePage extends Component{
         return(
             <div>
                 <section className="backgroudColor">
-
+                    <ButtonPlay />
                 </section>
             </div>
         )
