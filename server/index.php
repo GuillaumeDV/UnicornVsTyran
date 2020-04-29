@@ -8,7 +8,7 @@ require 'db.php';
 $router = new Router(new Request);
 
 $router->get('/index', function() {
-    $pdo = new PDO('mysql:host=localhost:8889;dbname=unicorn', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    $pdo = new PDO(DSN, USER, PASS, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
     if($pdo === false){
         echo "Connection error :" . $pdo->error_log();
     } else {
