@@ -1,7 +1,7 @@
 .display-num-quote {
-    justify-content: center;
-    margin: auto;
-    display: flex;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     color: #ff6da2; 
     padding: 0.7em 2em 0.7em 2em;
     border-radius: 10px;
