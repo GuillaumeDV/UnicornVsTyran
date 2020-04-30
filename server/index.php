@@ -25,19 +25,30 @@ $router->get('/api/index', function() {
 
 $router->post('/api/reponse', function() {
     //recuperer les entrées de l'utilisateur (string)
+    return json_encode($_POST);
+    if(isset($_POST['reponse'])) {
     $pdo = new PDO('mysql:host=localhost:8889;dbname=unicorn', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-    if($pdo === false){
-        echo "Connection error :" . $pdo->error_log();
-    } else {
-    //prepare request
-        try {
-            return json_encode($_POST['reponse']);
-            // suivant la reponse, je fais ceci ce la
-           //return reponse
-        } catch (PDOException $e) {
-        return $e->getMessage();
-        }
-    } 
+        if($pdo === false){
+            echo "Connection error :" . $pdo->error_log();
+        } else {
+            $query = $pdo->query('SELECT * FROM dictateurs');
+            $dictateurs = $query->fetchAll(PDO::FETCH_ASSOC);
+            }   
+            try {
+                if($_SERVER['REQUEST_METHOD']=="POST"){
+                    if ($_POST["cit_id"]== $_POST["citat"])
+                    //prepare request
+                    $getIdDictateurs = $request->prepare("SELECT * FROM dictateurs WHERE id=:id");
+                    $request->execute([
+                        'id'=>$_POST['id']
+                    ])}
+                return json_encode($_POST['reponse']);
+                // suivant la reponse, je fais ceci ce la
+            //return reponse
+            } catch (PDOException $e) {
+                return $e->getMessage();
+            }
+    }   
 });
 
 $router->get('/api/random', function() {
