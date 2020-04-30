@@ -7,7 +7,7 @@ const Count = () => {
     useEffect(() => {
         // Met à jour le titre du document via l’API du navigateur
         axios
-        .get('http://localhost:8000/index')
+        .get('http://localhost:8001/index')
         .then(response => console.log(response))
     }, []);
 
