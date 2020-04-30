@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Count = () => {
-    const [array, setArray] = useState([]);
+
+const Array = () => {
+    //const [array, setArray] = useState([]);
 
     useEffect(() => {
         // Met à jour le titre du document via l’API du navigateur
@@ -22,4 +23,4 @@ const Count = () => {
     )
 }
 
-export default Count;
+export default Array;

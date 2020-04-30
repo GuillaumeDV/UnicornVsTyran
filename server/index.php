@@ -13,11 +13,14 @@ $router->get('/index', function() {
     if($pdo === false){
         echo "Connection error :" . $pdo->error_log();
     } else {
-        $getAllDictateurs = ("SELECT name, citation, lien FROM dictateurs LEFT JOIN citations ON dictateurs.citation_id=citations.id RIGHT JOIN gifs ON dictateurs.gif_id=gifs.id");
+        $getAllDictateurs = ("SELECT * FROM dictateurs");
+        //SELECT name, citation, lien FROM dictateurs LEFT OUTER JOIN citations ON dictateurs.id=cit_id RIGHT OUTER JOIN gifs ON dictateurs.id=lien_id
         try {
             $sendRequest = $pdo->query($getAllDictateurs);
             $dictateurs = $sendRequest->fetchAll(PDO::FETCH_ASSOC);
+            var_dump($dictateurs);die;
             return json_encode($dictateurs);
+
         } catch (PDOException $e) {
         $error = $e->getMessage();
         }
