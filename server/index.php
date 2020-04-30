@@ -24,31 +24,34 @@ $router->get('/api/index', function() {
 });
 
 $router->post('/api/reponse', function() {
-    //recuperer les entrées de l'utilisateur (string)
-    return json_encode($_POST);
-    if(isset($_POST['reponse'])) {
-    $pdo = new PDO('mysql:host=localhost:8889;dbname=unicorn', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    if(isset($_POST)){
+        $citation_id = $_POST['cit_id']; 
+        $gif_id = $_POST['lien_id']; 
+
+        $pdo = new PDO(DSN, USER, PASS, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
         if($pdo === false){
             echo "Connection error :" . $pdo->error_log();
         } else {
-            $query = $pdo->query('SELECT * FROM dictateurs');
-            $dictateurs = $query->fetchAll(PDO::FETCH_ASSOC);
-            }   
             try {
-                if($_SERVER['REQUEST_METHOD']=="POST"){
-                    if ($_POST["cit_id"]== $_POST["citat"])
-                    //prepare request
-                    $getIdDictateurs = $request->prepare("SELECT * FROM dictateurs WHERE id=:id");
-                    $request->execute([
-                        'id'=>$_POST['id']
-                    ])}
-                return json_encode($_POST['reponse']);
-                // suivant la reponse, je fais ceci ce la
-            //return reponse
+                $sendRequest = $pdo->query("SELECT * FROM dictateurs LEFT OUTER JOIN citations ON dictateurs.id=citations.cit_id");
+                $dictateurs = $sendRequest->fetchAll(PDO::FETCH_ASSOC);
+                foreach($dictateurs as $dictateur) {
+                    if($dictateurs['id'] == $gif_id) {
+                        if($dictateurs['id'] == $citation_id) {
+                            return 'You Win! ' .'<br>' .'<img src="https://media.giphy.com/media/l2JdVSAGHuV3gkkms/giphy.gif"/>' .'<br>';
+                        } else {
+                            return 'Game OVER: ' .'<br>' .'<img src="https://media.giphy.com/media/fHc87TgyZjXgQumeFf/giphy.gif"/>' .'<br>';
+                        }
+                    }
+                    
+                }
+
             } catch (PDOException $e) {
                 return $e->getMessage();
             }
-    }   
+            }
+        } 
+    return json_encode($_POST);
 });
 
 $router->get('/api/random', function() {
