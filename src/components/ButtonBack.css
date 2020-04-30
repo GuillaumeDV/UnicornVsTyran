@@ -2,7 +2,6 @@
     display: block;
     position: absolute;
     top: 10%;
-    /* right: 41%; */
     left: 10%;
     color: white; 
     padding: 0.7em 2em 0.7em 2em;
@@ -11,4 +10,3 @@
     background-image: linear-gradient( 45deg, #25d9c8, #2abed9);
     border: none;
 }
-
