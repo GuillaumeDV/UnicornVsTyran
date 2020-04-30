@@ -4,7 +4,7 @@ function DictatorQuote() {
     return (
         <figure className="dictator-quote">
             <figcaption>
-                <blockquote></blockquote>
+                <blockquote>{}</blockquote>
             </figcaption>
         </figure>
     );
