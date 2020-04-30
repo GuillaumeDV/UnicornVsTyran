@@ -10,13 +10,13 @@ class GamePage extends Component{
     render(){   
         return(
             <div>
-                <section className="backgroudColorGame">
+                <section>
                     <Link to="/">
                         <ButtonBack />
                     </Link>                        
                         <Dictators />
-                       
-                        {/* <Array /> */}
+                        <Dictators />
+                        <Dictators />
 
                 </section>
             </div>

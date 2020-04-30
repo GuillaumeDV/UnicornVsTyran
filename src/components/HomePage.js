@@ -11,7 +11,7 @@ class HomePage extends Component{
     render(){   
         return(
             <div>
-                <section >
+                <section className="backgroudColor">
                     <Link to="/GamePage">
                         <ButtonPlay /> 
                     </Link>
