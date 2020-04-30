@@ -8,10 +8,7 @@ const Count = () => {
         // Met à jour le titre du document via l’API du navigateur
         axios
         .get('http://localhost:8000/index')
-        .then(response => response.data)
-        .then(data => {
-            setArray(data)
-        })
+        .then(response => console.log(response))
     }, []);
 
     return(
