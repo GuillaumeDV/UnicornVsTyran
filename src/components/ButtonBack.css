@@ -1,5 +1,7 @@
 .button-back {
-    margin: auto;
+    position: absolute;
+    bottom: 5%;
+    right: 50vw;
     color: white; 
     padding: 0.7em 2em 0.7em 2em;
     border-radius: 10px;

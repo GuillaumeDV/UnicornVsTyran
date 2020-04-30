@@ -1,0 +1,24 @@
+
+.container-photo{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-top: 50vh;
+}
+.container-photo .photo{
+    display: inline-block;
+    margin: auto;
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+}
+
+.container-photo .photo img{ 
+    display: block;
+    background-color: #ffffff;
+    width: 150px;
+    height:150px;   
+}
+
+
+
