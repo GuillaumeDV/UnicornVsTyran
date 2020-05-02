@@ -1,7 +1,51 @@
+.header{
+    width: 100vw;
+    text-align: center;
+}
+
+.header h1{
+    padding-top: 10px;
+    color: rgb(255,55,147);
+    text-shadow: -5px 3px #ffffff;
+    letter-spacing: 5px;
+}
+
+.header h1 .capital{
+    font-size: 2em;
+}
+
 .backgroudColor{
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
-    background: no-repeat center/80% url("./images/licorne.png");  
+    background-image: url("./images/licorne.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40%;
+
+    /* 
+    background: no-repeat center/60% url("./images/licorne.png"); 
+    background: no-repeat center/60% url("https://media.giphy.com/media/xUPGctRBZZG5WewaFa/giphy.gif"); 
+  
+    
+    */  
+}
+
+.backgroudColor:hover{
+
+    background-image: url("https://media.giphy.com/media/Wt1DTRYIAS69L5oJPn/giphy.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30%;
+}
+
+
+.footer{
+    width: 100vw;
+}
+
+.footer p{
+    text-align: center;
+    padding: 20px;
 }

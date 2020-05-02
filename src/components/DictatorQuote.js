@@ -1,15 +1,17 @@
-import React from 'react'
+import React from 'react';
+import ButtonNextQuote from './ButtonNextQuote'
 
 import './DictatorQuote.css'
 
 function DictatorQuote(props) {
-    console.log(props);
-    return (
-        <figure className="dictator-quote">
-            <figcaption>
-               <blockquote>{props.quote && props.quote.citation}</blockquote> 
-            </figcaption>
-        </figure>
+    //console.log(props);
+    return (    
+        <div className="conteneur-quote">
+            <div className="dictator-quote">
+                {props.quote && props.quote.citation}                   
+            </div>
+            <ButtonNextQuote /> 
+        </div>
     );
 }
 

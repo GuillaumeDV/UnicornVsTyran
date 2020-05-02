@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
-import DictatorQuote from './DictatorQuote'
 import Card from './DictatorCard';
 
 import '../assets/Dictators.css'
@@ -31,17 +29,13 @@ class Dictators extends Component{
 
     render(){
         return(
-             <div>
-                <section className="backgroudColorGame">
-                    <div className="container-photo">
-                            
-                        <DictatorQuote quote={this.state.quotes} />
-                        
-                         <Card img={this.state.quotes.lien}/>
-
-                    </div>
-                </section>
-            </div> 
+            <div className="container-photo"> 
+                {/* <DictatorQuote quote={this.state.quotes} /> */}                       
+                    <Card img={this.state.quotes.lien}/>
+                    <Card img={this.state.quotes.lien}/>
+                    <Card img={this.state.quotes.lien}/>
+                    
+                </div>
         )
     }
 
@@ -50,7 +44,7 @@ class Dictators extends Component{
 export default Dictators
 
 
-/* .then((response) => {
+{/* .then((response) => {
     const listQuote =[];
     while(listQuote){
         const random = response.data[Math.floor(Math.random()*40)];
@@ -58,5 +52,18 @@ export default Dictators
             listQuote.push(random);
         }
     }
-    }) */ 
+    }) 
     
+    function DictatorCard(props) {
+        //console.log(props);
+          return (    
+
+                  <img src={props.img && props.img} alt={props.name} />  
+                  <img src={props.img && props.img} />            
+              </div>
+            </div>
+      
+          );
+        } 
+    */}
+        

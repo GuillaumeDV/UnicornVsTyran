@@ -2,19 +2,17 @@ import React from 'react'
 
 import '../assets/Dictators.css'
 
-const Card = (props) => {
-  console.log(props);
-    return (
-        <div className="container-photo">
-                <figure className="photo">
-                     <img src={props.img && props.img} alt="Dictator card"></img>               
-
-                </figure> 
-
+function DictatorCard(props) {
+  //console.log(props);
+    return (    
+        <div className="dictator-gif"> 
+            {/* <img src={props.img && props.img} alt={props.name} />  */}
+            <img src={props.img && props.img} />            
         </div>
+
     );
   }
 
-export default Card
+export default DictatorCard
 
 

@@ -1,11 +1,10 @@
+.conteneur-btn-back{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+ }
+
 .button-back {
-    position: absolute;
-    bottom: 5%;
-    right: 50vw;
-    display: block;
-    position: absolute;
-    top: 10%;
-    left: 10%;
     color: white; 
     padding: 0.7em 2em 0.7em 2em;
     border-radius: 10px;

@@ -1,23 +1,27 @@
-
 .container-photo{
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    margin-top: 50vh;
-}
-.container-photo .photo{
-    display: inline-block;
+    width: 60%;
     margin: auto;
-    background-color: black;
-    color: #ffffff;
+    height: auto;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+}
+
+.dictator-gif{
+    display: inline-block;
+    width: 33%;
+    color: #000000;
     text-align: center;
 }
 
-.container-photo .photo img{ 
+img{ 
     display: block;
     background-color: #ffffff;
-    width: 150px;
-    height:150px;   
+    width: 180px;
+    height:180px;
+    text-align: center;
+    margin: auto;
+    border-radius: 90px;
+    box-shadow: -10px 5px 5px #25d9c8;
 }
 
 
