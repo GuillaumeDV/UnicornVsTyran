@@ -7,7 +7,7 @@ function DictatorCard(props) {
     return (    
         <div className="dictator-gif"> 
             {/* <img src={props.img && props.img} alt={props.name} />  */}
-            <img src={props.img && props.img} />            
+            <img src={props.img && props.img}  />            
         </div>
 
     );
