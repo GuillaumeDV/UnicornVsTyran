@@ -1,4 +1,7 @@
 .button-back {
+    position: absolute;
+    bottom: 5%;
+    right: 50vw;
     display: block;
     position: absolute;
     top: 10%;

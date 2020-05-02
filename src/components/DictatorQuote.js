@@ -1,10 +1,13 @@
 import React from 'react'
 
-function DictatorQuote() {
+import './DictatorQuote.css'
+
+function DictatorQuote(props) {
+    console.log(props);
     return (
         <figure className="dictator-quote">
             <figcaption>
-                <blockquote></blockquote>
+               <blockquote>{props.quote && props.quote.citation}</blockquote> 
             </figcaption>
         </figure>
     );
