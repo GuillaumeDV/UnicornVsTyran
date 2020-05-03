@@ -10,7 +10,7 @@ function DictatorQuote(props) {
             <div className="dictator-quote">
                 {props.quote && props.quote.citation}                   
             </div>
-            <ButtonNextQuote /> 
+            <ButtonNextQuote onClick={props.getDictator} /> 
         </div>
     );
 }

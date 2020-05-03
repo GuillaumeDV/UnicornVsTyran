@@ -21,7 +21,7 @@ class GamePage extends Component{
                     <ButtonBack />
                 </Link>
             <footer className="footer">
-                <p>&copy; : anaïs, guillaume, virginie, jérémie, dani, veronica</p>
+            <p>&copy; : anaïs, guillaume, sandrine, jimmy, jérémie, veronica</p>
             </footer>
             </div>
         )

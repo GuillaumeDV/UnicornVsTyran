@@ -17,7 +17,7 @@ class HomePage extends Component{
                     {/*<DisplayNumQuote />*/}
                 </section>
                 <footer className="footer">
-                    <p>&copy; : anaïs, guillaume, virginie, jérémie, dani, veronica</p>
+                    <p>&copy; : anaïs, guillaume, sandrine, jimmy, jérémie, veronica</p>
                 </footer>
             </div>
         )
