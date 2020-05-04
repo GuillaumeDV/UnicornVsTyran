@@ -1,24 +1,26 @@
-
 .container-photo{
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    margin-top: 50vh;
-}
-.container-photo .photo{
-    display: inline-block;
+    width: 60%;
     margin: auto;
-    background-color: black;
-    color: #ffffff;
+    height: auto;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    transform: rotate(180deg);
+}
+
+.dictator-gif{
+    display: inline-block;
+    width: 33%;
+    color: #000000;
     text-align: center;
 }
 
-.container-photo .photo img{ 
-    display: block;
-    background-color: #ffffff;
-    width: 150px;
-    height:150px;   
-}
+img{ 
 
+    background-color: #ffffff;
+    width: 180px;
+    height:180px;
+    margin: auto;
+    box-shadow: 5px -5px 3px #23bbad;
+}
 
 
