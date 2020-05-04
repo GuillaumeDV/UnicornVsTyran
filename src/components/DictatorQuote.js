@@ -4,7 +4,7 @@ import ButtonNextQuote from './ButtonNextQuote'
 import './DictatorQuote.css'
 
 function DictatorQuote(props) {
-    //console.log(props);
+    console.log(props);
     return (    
         <div className="conteneur-quote">
             <div className="dictator-quote">
