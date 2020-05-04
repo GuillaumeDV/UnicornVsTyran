@@ -1,8 +1,10 @@
+.quote-next{
+   display: flex;
+   justify-content: end;
+   margin-right: 50px;
+   margin-bottom: 30px;
+}
 .button-next-quote {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
     color: white;
     padding: 0.7em 2em 0.7em 2em;
     border-radius: 10px;

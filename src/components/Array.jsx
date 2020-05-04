@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Count = () => {
+
+const Array = () => {
     const [array, setArray] = useState([]);
 
     useEffect(() => {
@@ -22,4 +23,4 @@ const Count = () => {
     )
 }
 
-export default Count;
+export default Array;

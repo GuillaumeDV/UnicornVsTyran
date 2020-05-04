@@ -7,6 +7,7 @@ require 'db.php';
 
 $router = new Router(new Request);
 
+
 $router->get('/api/index', function() {
     $pdo = new PDO('mysql:host=localhost:8889;dbname=unicorn', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
     if($pdo === false){
@@ -18,6 +19,7 @@ $router->get('/api/index', function() {
             $dictateurs = $sendRequest->fetchAll(PDO::FETCH_ASSOC);
             return json_encode($dictateurs);
         } catch (PDOException $e) {
+
         return $e->getMessage();
         }
     } 
