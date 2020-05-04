@@ -22,7 +22,7 @@ $router->get('/api/index', function() {
         }
     } 
 });
-
+/*
 $router->post('/api/reponse', function() {
     if(isset($_POST)){
         $citation_id = $_POST['cit_id']; 
@@ -69,4 +69,4 @@ $router->get('/api/random', function() {
         return $e->getMessage();
         }
     } 
-});
+});*/
